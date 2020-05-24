@@ -15,7 +15,7 @@ class Participante{
         cy.clicarComando(comandoNovoParticipante);
     }
 
-    preencherTelaCadastroParticipante(nome, email){
+    preencherCadastroParticipante(nome, email){
         cy.escreverCampoTexto(campoNome,nome);
         cy.escreverCampoTexto(campoEmail, email);
     }
