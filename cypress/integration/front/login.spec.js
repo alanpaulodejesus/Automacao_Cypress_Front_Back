@@ -1,5 +1,5 @@
 /// <reference types ="cypress"/>
-const Login = require('../page-objects/login.po')
+const Login = require('../../page-objects/login.po')
 
 describe('Login', ()=>{
 
