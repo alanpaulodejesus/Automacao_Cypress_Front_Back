@@ -20,10 +20,9 @@ describe('Participantes', ()=>{
     
     it('Cadastrar participante com Sucesso', ()=>{
 
-        cy.wait(2000);
         participantePage.clicarMenuParticipantes();
         participantePage.clicarComandoNovoParticipante();
-        participantePage.preencherTelaCadastroParticipante(nome, email);
+        participantePage.preencherCadastroParticipante(nome, email);
     })
 
 })

@@ -8,7 +8,7 @@ const campoEmail ='input[placeholder="Digite o email"]';
 class Participante{
 
     clicarMenuParticipantes(){
-        cy.clicarComando(menuParticipantes);
+        cy.clicarComando(menuParticipantes, {timeOut:5000});
     }
 
     clicarComandoNovoParticipante(){
