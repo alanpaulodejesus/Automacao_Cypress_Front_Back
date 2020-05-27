@@ -1,7 +1,13 @@
 /// <reference types ="cypress"/>
+const gerarCpf = require('gerar-cpf')
+import faker from 'faker'
+
+const email = faker.internet.email();
+const telefone = faker.phone.phoneNumber()
+const primeiroNome = faker.name.firstName();
+const segundoNome = faker.name.lastName();
 
 describe('Administrador', ()=>{
-
 
     it('Cadastrar Administrador com sucesso', ()=>{
 
@@ -17,12 +23,12 @@ describe('Administrador', ()=>{
                     body:{
                         
                         createdFrom: 'admin',
-                        ein: '583.226.550-53',
-                        email: 'tesdsd@sdsd.dfda',
+                        ein: gerarCpf(),
+                        email: email,
                         groups: '5b51e6df5f4ad9d5c8042e44',
                         isActive: true,
-                        name: 'ADM inserido via rest api',
-                        phone: '(31) 94447-4741'
+                        name: primeiroNome + segundoNome,
+                        phone: telefone
                         
                     },
                     failOnStatusCode: false
