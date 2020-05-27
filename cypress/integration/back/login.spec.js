@@ -1,6 +1,6 @@
 /// <reference types ="cypress"/>
 
-describe('Login Brickz', ()=>{
+describe('Login', ()=>{
 
     it('Login com sucesso', ()=>{
 
@@ -11,8 +11,8 @@ describe('Login Brickz', ()=>{
                         email: 'alan.jesus@ipepar.com',
                         password:'123456'
                     }
-                }).as('response');
-        
+                })//.its('body.token').should('not.be.empty')
+                .as('response');
                 cy.get('@response').its('status').should('be.equal', 200);
     })   
 
@@ -29,6 +29,6 @@ describe('Login Brickz', ()=>{
         }).as('response');
 
         cy.get('@response').its('status').should('be.equal', 401);
-})   
+    })   
 
 })

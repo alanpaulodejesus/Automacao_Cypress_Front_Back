@@ -8,13 +8,15 @@ describe('Login', ()=>{
     before(()=>{
         cy.UrlAdm();
     })
-    
-    
+
     it('Realizar Login com Sucesso', ()=>{
         
         loginPage.loginComSucesso();
         expect(loginPage.validaAcessoUsuario());
     })
 
+    after(()=>{
+        loginPage.logout();
+    })
 })
 

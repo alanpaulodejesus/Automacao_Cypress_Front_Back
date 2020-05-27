@@ -1,6 +1,21 @@
+Cypress.Commands.add('getToken' , (user, passwrd)=>{
+    cy.request({
+        method: 'POST',
+        url:'/api/v1/login/admin',
+        body:{
+            email: user,
+            password: passwrd
+        }
+    }).its('body.token').should('not.be.empty')
+    .then(token=>{
+        return token;
+    })
+})
+
 
 Cypress.Commands.add('UrlAdm' , ()=>{
-    cy.visit('https://adm-dev.brickz.com.br');
+
+    cy.visit('https://adm-dev.brickz.com.br/login/');
 })
 
 Cypress.Commands.add('escreverCampoTexto' , (locator, dado)=>{
@@ -9,6 +24,10 @@ Cypress.Commands.add('escreverCampoTexto' , (locator, dado)=>{
 
 Cypress.Commands.add('clicarComando' , (locator)=>{
     cy.get(locator).click();
+})
+
+Cypress.Commands.add('elementoNaTela' , (locator)=>{
+    cy.title().should('to.be.equal', locator)
 })
 
 Cypress.Commands.add('validarTextoNaTela' , (locator, texto)=>{
