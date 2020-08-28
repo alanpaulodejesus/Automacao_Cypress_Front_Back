@@ -8,7 +8,7 @@ describe('Login', ()=>{
                     url: '/api/v1/login/admin',
                     method:'POST',
                     body:{
-                        email: 'alan.jesus@ipepar.com',
+                        email: 'xxxxxxxxx',
                         password:'123456'
                     }
                 })//.its('body.token').should('not.be.empty')
@@ -23,7 +23,7 @@ describe('Login', ()=>{
             method:'POST',
             failOnStatusCode: false,
             body:{
-                email: 'alan.jesus@iperpar.com',
+                email: 'xxxxxxxxxxx',
                 password:'123456'
             }
         }).as('response');

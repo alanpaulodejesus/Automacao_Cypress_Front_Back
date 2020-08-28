@@ -16,7 +16,7 @@ class Login{
     }
 
     loginComSucesso(){
-        cy.escreverCampoTexto(campoLogin, 'alan.jesus@ipepar.com');
+        cy.escreverCampoTexto(campoLogin, 'xxxxxxxxx');
         cy.escreverCampoTexto(campoSenha,'123456');
         cy.clicarComando(comandoEntrar);
     }

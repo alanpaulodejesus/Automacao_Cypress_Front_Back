@@ -1,7 +1,7 @@
 Cypress.Commands.add('getToken' , (user, passwrd)=>{
     cy.request({
         method: 'POST',
-        url:'/api/v1/login/admin',
+        url:'xxxxxxxxx',
         body:{
             email: user,
             password: passwrd
@@ -15,7 +15,7 @@ Cypress.Commands.add('getToken' , (user, passwrd)=>{
 
 Cypress.Commands.add('UrlAdm' , ()=>{
 
-    cy.visit('https://adm-dev.brickz.com.br/login/');
+    cy.visit('xxxxxxxxxxxx');
 })
 
 Cypress.Commands.add('escreverCampoTexto' , (locator, dado)=>{
