@@ -1,13 +1,13 @@
 /// <reference types ="cypress"/>
 
-describe('Dashboard', ()=>{
+describe('Acess', ()=>{
 
-    it('Retorno Dashboard', ()=>{
-                cy.getToken('alan.jesus@ipepar.com', '123456')
+    it('Acess aplication', ()=>{
+                cy.getToken('xxxxxxxx', '123456')
                 .then(token=>{
 
                         cy.request({
-                            url: '/api/v1/transactions/reports/dashboard/main',
+                            url: 'xxxxxxxxxxxx',
                             method:'GET',
                             headers:{ Authorization: `Bearer ${token}` },
                             
