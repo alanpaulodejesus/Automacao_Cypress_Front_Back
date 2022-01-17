@@ -15,15 +15,19 @@ Cypress.Commands.add('getToken' , (user, passwrd)=>{
 
 Cypress.Commands.add('UrlAdm' , ()=>{
 
-    cy.visit('xxxxxxxxxxxx');
+    cy.visit('https://hmg-portal.blip.ai/login');
 })
 
-Cypress.Commands.add('escreverCampoTexto' , (locator, dado)=>{
+Cypress.Commands.add('inputText' , (locator, dado)=>{
     cy.get(locator).type(dado);
 })
 
-Cypress.Commands.add('clicarComando' , (locator)=>{
+Cypress.Commands.add('btnClick' , (locator)=>{
     cy.get(locator).click();
+})
+
+Cypress.Commands.add('btnClickXpath' , (locator)=>{
+    cy.xpath(locator).click();
 })
 
 Cypress.Commands.add('elementoNaTela' , (locator)=>{

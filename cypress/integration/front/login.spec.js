@@ -1,4 +1,5 @@
 /// <reference types ="cypress"/>
+
 const Login = require('../../page-objects/login.po')
 
 describe('Login', ()=>{
@@ -9,14 +10,14 @@ describe('Login', ()=>{
         cy.UrlAdm();
     })
 
-    it('Realizar Login com Sucesso', ()=>{
+    it('Login With Sucess', ()=>{
         
-        loginPage.loginComSucesso();
-        expect(loginPage.validaAcessoUsuario());
+        loginPage.loginWithSucess();
+        expect(loginPage.validUserAcess());
     })
 
     after(()=>{
-        loginPage.logout();
+        
     })
 })
 

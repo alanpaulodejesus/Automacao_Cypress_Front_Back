@@ -5,7 +5,7 @@ describe('Login', ()=>{
     it('Login com sucesso', ()=>{
 
                 cy.request({
-                    url: '/api/v1/login/admin',
+                    url: 'xxxxxxxxx',
                     method:'POST',
                     body:{
                         email: 'xxxxxxxxx',
@@ -19,7 +19,7 @@ describe('Login', ()=>{
     it('Login inválido', ()=>{
 
         cy.request({
-            url: '/api/v1/login/admin',
+            url: 'xxxxxxxxx',
             method:'POST',
             failOnStatusCode: false,
             body:{
